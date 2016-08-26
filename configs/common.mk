@@ -7,6 +7,7 @@ LOCAL_PATH:= vendor/platinum/prebuilts/common/system
 # Common build prop overrides 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dataroaming=false \
+    ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
     ro.com.google.clientidbase=android-google \
