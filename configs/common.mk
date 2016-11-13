@@ -41,7 +41,6 @@ PRODUCT_COPY_FILES += \
     vendor/platinum/prebuilts/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so
 endif
 
-
 # Enable sip+voip on all targets
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
@@ -54,7 +53,8 @@ PRODUCT_COPY_FILES +=  \
 endif
 
 # Bootanimation support
-include vendor/platinum/configs/bootanimation.mk
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/media/bootanimation.zip:system/media/bootanimation.zip
 
 ## Don't compile SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true
