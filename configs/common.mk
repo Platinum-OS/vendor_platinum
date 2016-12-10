@@ -33,6 +33,10 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/platinum/overlays/common
 # Needed Packages
 PRODUCT_PACKAGES += Launcher3
 
+# Import library to fix trusted face issues
+PRODUCT_PACKAGES += \
+libprotobuf-cpp-full \
+
 # Proprietary latinime libs needed for Keyboard swyping
 ifneq ($(filter platinum_shamu platinum_hammerhead,$(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES += \
