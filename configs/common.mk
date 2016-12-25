@@ -28,6 +28,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.service.adb.enable=1 \
     net.tethering.noprovisioning=true
 
+# Pull in Prebuilt applications for phones
+$(call inherit-product-if-exists, vendor/prebuilt/prebuilt.mk)
+
 # Common overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/platinum/overlays/common
 
