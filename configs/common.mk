@@ -23,7 +23,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.facelock.use_intro_anim=false \
     ro.build.selinux=1 \
     ro.adb.secure=1 \
-    persist.sys.dun.override=0
+    persist.sys.dun.override=0 \
+    net.tethering.noprovisioning=true
 
 # Common overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/platinum/overlays/common
