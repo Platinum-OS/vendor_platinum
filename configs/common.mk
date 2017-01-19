@@ -52,6 +52,12 @@ PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/vendor/media/PFFprec_600.emd:system/vendor/media/PFFprec_600.emd
 endif
 
+# Backuptool support
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/addon.d/50-platinum.sh:system/addon.d/50-platinum.sh \
+    $(LOCAL_PATH)/bin/backuptool.functions:system/bin/backuptool.functions \
+    $(LOCAL_PATH)/bin/backuptool.sh:system/bin/backuptool.sh
+
 # Bootanimation support
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/bootanimation.zip:system/media/bootanimation.zip
