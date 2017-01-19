@@ -68,8 +68,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bin/backuptool.sh:system/bin/backuptool.sh
 
 # Bootanimation support
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/media/bootanimation.zip:system/media/bootanimation.zip
+include vendor/platinum/configs/bootanimation.mk
 
 ## Don't compile SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true

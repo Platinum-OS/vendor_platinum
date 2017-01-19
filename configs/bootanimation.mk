@@ -14,17 +14,13 @@
 
 # Add Stock bootanimation based on device
 # Local path for prebuilts
-LOCAL_PATH:= vendor/simpleaosp/prebuilts/bootanimation
+LOCAL_PATH:= vendor/platinum/prebuilts/bootanimation
 
-ifneq ($(filter saosp_angler,$(TARGET_PRODUCT)),)
+ifneq ($(filter platinum_hammerhead,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/angler.zip:system/media/bootanimation.zip
+        $(LOCAL_PATH)/hammerhead.zip:system/media/bootanimation.zip
 endif
-ifneq ($(filter saosp_bullhead,$(TARGET_PRODUCT)),)
-    PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/bullhead.zip:system/media/bootanimation.zip
-endif
-ifneq ($(filter saosp_shamu,$(TARGET_PRODUCT)),)
+ifneq ($(filter platinum_shamu,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/shamu.zip:system/media/bootanimation.zip
 endif
