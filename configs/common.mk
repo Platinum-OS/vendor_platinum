@@ -46,5 +46,4 @@ PRODUCT_COPY_FILES +=  \
 endif
 
 # Bootanimation support
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/media/bootanimation.zip:system/media/bootanimation.zip
+include vendor/platinum/configs/bootanimation.mk
