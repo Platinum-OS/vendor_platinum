@@ -31,9 +31,15 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/platinum/overlays/common
 # Needed Packages
 PRODUCT_PACKAGES += Launcher3
 
-# Proprietary latinime lib needed for swyping
+# Proprietary latinime libs needed for Keyboard swyping
+ifneq ($(filter platinum_shamu platinum_hammerhead,$(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/lib/libjni_latinime.so:system/lib/libjni_latinime.so
+     $(LOCAL_PATH)/lib/libjni_latinime.so:system/lib/libjni_latinime.so
+else
+PRODUCT_COPY_FILES += \
+    vendor/platinum/prebuilts/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so
+endif
+
 
 # Enable sip+voip on all targets
 PRODUCT_COPY_FILES += \
